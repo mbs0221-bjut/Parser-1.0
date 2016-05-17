@@ -1,0 +1,204 @@
+json obj = { 
+		"people": [
+				{ "firstName": "Brett", "lastName":"McLaughlin", "email": "aaaa" },
+				{ "firstName": true, "lastName":"Hunter", "email": false},
+				{ "firstName": "Elliotte", "lastName":"Harold", "email": "cccc" },
+				{ "firstName": null, "lastName":"Harold", "email": null }
+			]
+		};
+
+struct point{
+	int a, b;
+};
+
+struct box{
+	int l, w, h;
+	point p1, p2, p3;
+}ball;
+
+struct node{
+	box b1, b2, b3;
+}head, tail;
+
+struct{
+	node n1, n2, n3;
+};
+
+enum etype{
+	AA, BB, CC
+}EA, EB;
+
+int x;
+int y;
+float c;
+int arr[20];
+char char_arr[20];
+float float_arr[20];
+int a7[7][6][5][4][3][2][1];
+int a6[6][5][4][3][2][1];
+int a5[5][4][3][2][1];
+int a4[4][3][2][1];
+int a3[3][2][1];
+int a2[2][1];
+int a1[1];
+
+lambda x.(lambda x.(x x));
+
+void test(){
+	int i,j,k,l;
+	k = 0;
+	while(true){
+		if(i == j) continue;
+		k = arr[k];
+		if(k == 20) break;
+	}
+	l = 0;
+	switch(k + 1){
+	case 1:i = i + 1
+	case 2:{j = j + 1;break;}
+	case 3:k = k + 1
+	case 4:{l = l + 1;break;}
+	}
+	for(i = 0; i < 10; i = i + 1){
+		for(j = 0; j < 10; j = j + 1){
+			if(i == j) continue;
+			for(k = 0; k < 10; k = k + 1){
+				l = l + 2;
+				if(l > 10) break;
+			}
+		}
+	}
+}
+
+void main(int argc, char argv){
+	auto d = x + y * c;
+	auto e = x + y * c;
+	d = d >= e;
+	print x + y * c;
+}
+
+class shape{
+	int a;
+};
+
+class circle extends shape{
+
+	int x, y, z;
+	point p1, p2;
+
+	void main1(int arg1, int arg2){
+		float v;
+		v = 0x121ff;
+		v = 0212;
+		auto au1 = arg1 + arg2 * 12.4;
+		auto au2 = 13.4 * au1 + 12;
+		v = head.b2.p1.b;
+		v = sizeof(point);
+		v = sizeof(box);
+		v = sizeof(node);
+		v = sizeof(int);
+		v = v + 12;
+		v = 16 - 3.14e-2;
+		x = ++arg1 + 10;
+		y = --arg2 + 10;
+		x = --x << 2;
+		y = ++y >> 2;
+		x = arg1 + 10;
+		y = arg2 + 10;
+	}
+
+	int i;
+	
+	void move1(int dx, int dy){
+		
+		while(i < 10){
+			int i;
+			for (i = 0; i < 10;i = i + 1){
+				int x;
+				x = dx + 10;
+				int y;
+				y = dy + 10;
+			}
+			i = i + 1;
+			x = dx + 10;
+			y = dy + 10;
+		}
+	}
+};
+
+
+class ellipse extends circle{
+
+	int e1, e2;
+	double d1, d2;
+
+	void main2(){
+		int e1;
+		e1 = tail.b2.p1.a;
+		int e2;
+		e2 = tail.b2.p1.b;
+	}
+};
+
+int love;
+int hate;
+int fake;
+int truth;
+
+class rect extends shape{
+
+	int x, y, z;
+	circle c1, c2, c3;
+	node n1;
+
+	void main3(int arg1, int arg2){
+		float v;
+		v = tail.b2.p1.b;
+		v = 16 - 3.14e-2;
+		int x, y;
+		do{
+			x = arg1 + 10;
+			y = arg2 + 10;
+			if(x == y) continue;
+			v = v + 1;
+			if(v > 5) break;
+		}while(v < 10);
+	}
+
+	int u, v, w;
+
+	void move3(int dx, int dy, int dz){
+		x = c1.p1.a;
+		x = c2.p1.b;
+		z = c3.p2.a;
+		z = c3.p2.b;
+		if(x<200){
+			int x;
+			x = dx + 10;
+		}else if(x < 400){
+			int y;
+			y = dy + 10;
+		}else if(x < 800){
+			int z;
+			z = dz + 10;
+		}else{
+			int w;
+			w = dz + 10;
+		}
+		if(x<0){
+			x = 0;
+		}else if(y<0){
+			y = 0;
+		}else{
+			z = 0;
+		}
+	}
+	int u1, v1, w1;
+};
+
+class me extends rect{
+
+};
+
+int ea, eb, ec;
+#
