@@ -4,7 +4,6 @@
 
 using namespace std;
 
-//----------------------节点---------------------------------------
 Node::Node()
 {
     line = Lexer::line;
@@ -36,7 +35,7 @@ string Node::toString()
 
 map<string, int> Node::lables = map<string, int>();
 int Node::lable = 0;
-//----------------------陈述性的语句-------------------------------
+
 string Statement::toString()
 {
     ostringstream fout;
@@ -44,7 +43,6 @@ string Statement::toString()
     return fout.str();
 }
 
-//----------------------表达式类-----------------------------------
 Expr ::Expr()
 {
     token = nullptr;
@@ -122,7 +120,7 @@ string Member::toString()
     fout << "[SI + " << std::hex << offset << "H]" << endl;
     return fout.str();
 }
-//----------------------双目运算表达式类---------------------------
+
 Binocular::Binocular(Token *token, Expr *expr1, Expr *expr2)
     : Expr(token, Type::max(expr1->type, expr2->type)), expr1(expr1), expr2(expr2) {}
 string Binocular::toString()
@@ -139,7 +137,6 @@ string Binocular::toString()
     return fout.str();
 }
 
-//----------------------单目运算表达式类---------------------------
 Unary::Unary(Token *token, Expr *expr) : Expr(token, expr->type), expr(expr) {}
 string Unary::toString()
 {
@@ -167,7 +164,6 @@ string Access::toString()
     return fout.str();
 }
 
-//----------------------环境---------------------------------------
 bool CompareId::operator()(const pair<string, Id> &id1, const pair<string, Id> &id2)
 {
     return id1.second.offset < id2.second.offset;
@@ -399,7 +395,6 @@ string Continue::toString()
 
 stack<Statement *> Continue::cur = stack<Statement *>();
 
-//----------------------定义性的语句-------------------------------
 Nodes::Nodes() {}
 Nodes::Nodes(Nodes *nodes)
 {
@@ -565,7 +560,6 @@ string Class::toString()
     return fout.str();
 }
 
-//----------------------JSON----------------------------------
 string JSONValue::toString()
 {
     return "JSONValue";
@@ -629,6 +623,8 @@ JSONValue *JSONObject::operator[](string name)
             return (*it)->node;
         }
     }
+
+    return nullptr;
 }
 string JSONObject::toString()
 {

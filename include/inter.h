@@ -5,7 +5,6 @@
 
 using namespace std;
 
-//----------------------�ڵ�---------------------------------------
 struct Node
 {
 	int line;
@@ -18,13 +17,11 @@ struct Node
 	virtual string toString();
 };
 
-//----------------------�����Ե����-------------------------------
 struct Statement : Node
 {
 	virtual string toString();
 };
 
-//----------------------����ʽ��-----------------------------------
 struct Expr : Statement
 {
 	Token *token; // & | ~ && ||
@@ -57,7 +54,6 @@ struct Member : Id
 	virtual string toString();
 };
 
-//----------------------˫Ŀ�������ʽ��---------------------------
 struct Binocular : Expr
 {
 	Expr *expr1, *expr2;
@@ -65,7 +61,6 @@ struct Binocular : Expr
 	virtual string toString();
 };
 
-//----------------------��Ŀ�������ʽ��---------------------------
 struct Unary : Expr
 {
 	Expr *expr;
@@ -86,7 +81,6 @@ struct Access : Expr
 	virtual string toString();
 };
 
-//----------------------����---------------------------------------
 struct CompareId
 {
 	bool operator()(const pair<string, Id> &id1, const pair<string, Id> &id2);
@@ -209,7 +203,6 @@ struct Continue : Statement
 	virtual string toString();
 };
 
-//----------------------�����Ե����-------------------------------
 struct Nodes : Node
 {
 	vector<Node *> nodes;
@@ -266,7 +259,6 @@ struct Class : Nodes, Type
 	virtual string toString();
 };
 
-//----------------------JSON----------------------------------
 struct JSONValue : Node
 {
 	virtual string toString();
